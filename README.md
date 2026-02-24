@@ -1,13 +1,11 @@
-# Yashel KARA Portfolio
-
-Статический сайт-портфолио (HTML/CSS/JS modules) для архитектурной студии.
+https://theruziev19.github.io/Yashel-Kara/
 
 ## Как запустить локально
 
 1. Откройте терминал в папке проекта:
 
 ```bash
-cd /Users/rustamruziev/Desktop/Yashel-Kara
+cd /Users/Desktop/Yashel-Kara
 ```
 
 2. Запустите локальный HTTP-сервер:
