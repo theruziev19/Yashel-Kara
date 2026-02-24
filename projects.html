@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Проекты — Портфолио</title>
+  <meta name="description" content="Все проекты: архитектура и интерьер." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Prata&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260227" />
+</head>
+
+<body class="catalogPage">
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a class="is-current" href="projects.html">Проекты</a>
+        <a href="about.html">О студии</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Открыть меню">Меню</button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a href="index.html">Главная</a>
+      <a href="projects.html">Проекты</a>
+      <a href="about.html">О студии</a>
+      <a href="contact.html">Контакты</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalogHero">
+      <div class="container catalogHero__inner">
+        <p class="homeKicker homeKicker--dark">PORTFOLIO</p>
+        <h1>Проекты студии</h1>
+        <p>Структурированный каталог реализованных и разработанных пространств: архитектура и интерьер.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="projectsHeader projectsHeader--catalog">
+          <div class="tabs" role="tablist" aria-label="Фильтр проектов">
+            <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+            <button class="tab" data-filter="architecture" role="tab" aria-selected="false">Архитектура</button>
+            <button class="tab" data-filter="interior" role="tab" aria-selected="false">Интерьер</button>
+          </div>
+          <a class="btn btn--link" href="contact.html">Обсудить ваш проект →</a>
+        </div>
+
+        <div class="projectsGrid projectsGrid--catalog" id="projectsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--home">
+    <div class="container footer__inner">
+      <div class="muted small">© <span id="year"></span> Studio</div>
+      <div class="muted small"><a data-site-href="email" data-site-text="email" href="mailto:hello@example.com">hello@example.com</a></div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/site.js?v=20260227"></script>
+  <script type="module" src="js/main.js?v=20260227"></script>
+  <script type="module" src="js/projects.js?v=20260227"></script>
+</body>
+</html>

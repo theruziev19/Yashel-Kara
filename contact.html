@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты — Портфолио</title>
+  <link rel="stylesheet" href="styles.css?v=20260227" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
+      </a>
+
+      <nav class="nav">
+        <a href="projects.html">Проекты</a>
+        <a href="about.html">О студии</a>
+        <a class="is-current" href="contact.html">Контакты</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Открыть меню">Меню</button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a href="projects.html">Проекты</a>
+      <a href="about.html">О студии</a>
+      <a href="contact.html">Контакты</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container footerGrid">
+      <div>
+        <h1 class="title">Контакты</h1>
+        <p class="muted">Напишите — ответим и предложим варианты.</p>
+      </div>
+
+      <div class="contact">
+        <div class="contact__row">
+          <div class="muted small">Email</div>
+          <a data-site-href="email" data-site-text="email" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+        <div class="contact__row">
+          <div class="muted small">Телефон</div>
+          <a data-site-href="phone" data-site-text="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+        </div>
+        <div class="contact__row">
+          <div class="muted small">Instagram</div>
+          <a data-site-href="instagram" data-site-text="instagram" href="https://instagram.com/studio" rel="noopener">/studio</a>
+        </div>
+      </div>
+
+      <form class="form" id="form">
+        <label class="muted small">Заявка</label>
+        <input name="name" placeholder="Имя" required />
+        <input name="contact" placeholder="Телефон / Telegram" required />
+        <textarea name="msg" rows="4" placeholder="Площадь, стиль, бюджет…"></textarea>
+        <button class="btn" type="submit">Отправить</button>
+        <div class="muted small" id="formNote">Сейчас форма в демо (покажет сообщение).</div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="muted small">© <span id="year"></span> Studio</div>
+      <div class="muted small"><a href="projects.html">Проекты →</a></div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/site.js?v=20260227"></script>
+  <script type="module" src="js/main.js?v=20260227"></script>
+</body>
+</html>
