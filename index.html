@@ -1,11 +1,210 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио проектов домов</title>
+  <meta name="description" content="Портфолио архитектурных проектов домов. Минимализм, ясность, тишина." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#projects">Проекты</a>
+        <a href="#manifesto">Манифест</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Открыть меню">Меню</button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a href="#projects">Проекты</a>
+      <a href="#manifesto">Манифест</a>
+      <a href="#contact">Контакты</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__media" role="img" aria-label="Архитектура у моря"
+      style="background-image:url('assets/cover.jpg');">
+    </div>
+
+    <div class="container hero__text">
+      <div class="hero__title">
+        <div class="hero__kicker">Yashel KARA</div>
+        <h1>Architecture<br/>of Silence.</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="manifesto" class="section">
+    <div class="container">
+      <div class="split">
+        <figure class="split__media">
+          <img src="assets/p1-2.jpg" alt="Свет и бетон" />
+        </figure>
+
+        <div class="split__content">
+          <h2 class="huge">НЕ ПУСТОТА.<br/>ЯСНОСТЬ.</h2>
+          <p class="lead">
+            Мы проектируем дома как тихие пространства — где свет становится материалом,
+            а планировка снимает лишнее.
+          </p>
+          <p class="muted">
+            Минимум жестов, максимум смысла: пропорции, ритм, логика движения,
+            честные материалы и точные детали.
+          </p>
+
+          <div class="facts">
+            <div class="fact">
+              <div class="fact__k">Подход</div>
+              <div class="fact__v">Редукция и дисциплина</div>
+            </div>
+            <div class="fact">
+              <div class="fact__k">Материалы</div>
+              <div class="fact__v">бетон · камень · дерево · стекло</div>
+            </div>
+            <div class="fact">
+              <div class="fact__k">Фокус</div>
+              <div class="fact__v">свет · тень · тишина</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="projectLead">
+        <div class="projectLead__left">
+          <div class="mono">PROJECT 01:</div>
+          <h2 class="title">HORIZON HOUSE</h2>
+          <p class="muted">Дом, растворяющий границу между океаном и жильцом.</p>
+        </div>
+        <a class="btn" href="project.html?slug=horizon-house">Открыть проект →</a>
+      </div>
+
+      <div class="projectBanner">
+        <img src="assets/p1-1.jpg" alt="Horizon House экстерьер" />
+      </div>
+
+      <div class="projectMeta">
+        <div>
+          <div class="meta__k">Локация</div>
+          <div class="meta__v">Algarve, Portugal</div>
+        </div>
+        <div>
+          <div class="meta__k">Площадь</div>
+          <div class="meta__v">180 м²</div>
+        </div>
+        <div>
+          <div class="meta__k">Год</div>
+          <div class="meta__v">2024</div>
+        </div>
+        <div>
+          <div class="meta__k">Стиль</div>
+          <div class="meta__v">Modern</div>
+        </div>
+      </div>
+
+      <div class="projectGallery2">
+        <img src="assets/p1-3.jpg" alt="Вид на воду" />
+        <img src="assets/p1-2.jpg" alt="Интерьер" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED PROJECTS GRID -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <h2 class="title">Избранные проекты</h2>
+        <div class="filters">
+          <button class="chip is-active" data-filter="all">Все</button>
+          <button class="chip" data-filter="modern">Modern</button>
+          <button class="chip" data-filter="scandi">Scandi</button>
+          <button class="chip" data-filter="classic">Classic</button>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+
+      <div class="sectionFoot">
+        <a class="btn btn--link" href="#contact">Все проекты студии →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REDUCTION -->
+  <section class="section section--beige">
+    <div class="container">
+      <div class="reduction">
+        <h2 class="huge">ДИСЦИПЛИНА<br/>РЕДУКЦИИ.</h2>
+        <div class="reduction__body">
+          <p>
+            Отбрасываем случайное — чтобы оставить точное.
+            Каждая линия оправдана функцией, светом и контекстом.
+          </p>
+          <p class="muted">
+            Планы строятся вокруг простых сценариев: вход, вид, приватность, тишина.
+            Материалы — честные. Детали — строгие.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container footerGrid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
+        </div>
+        <div class="muted small">Архитектура частных домов · концепция · рабочая документация</div>
+      </div>
+
+      <div class="contact">
+        <div class="contact__row">
+          <div class="muted small">Email</div>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+        <div class="contact__row">
+          <div class="muted small">Телефон</div>
+          <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+        </div>
+        <div class="contact__row">
+          <div class="muted small">Instagram</div>
+          <a href="#" rel="noopener">/studio</a>
+        </div>
+      </div>
+
+      <form class="form" id="form">
+        <label class="muted small">Заявка</label>
+        <input name="name" placeholder="Имя" required />
+        <input name="contact" placeholder="Телефон / Telegram" required />
+        <textarea name="msg" rows="4" placeholder="Площадь, этажность, стиль, бюджет…"></textarea>
+        <button class="btn" type="submit">Отправить</button>
+        <div class="muted small" id="formNote">Сейчас форма в режиме демо (покажет сообщение).</div>
+      </form>
+    </div>
+
+    <div class="container copyright">
+      <div class="muted small">© <span id="year"></span> Studio. All rights reserved.</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
