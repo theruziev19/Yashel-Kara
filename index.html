@@ -3,146 +3,252 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yashel KARA — Архитектура и Интерьеры</title>
-  <meta name="description" content="Студия Yashel Kara: строгая архитектурная подача, акцент на структуру, свет и ритм частных пространств." />
+  <title>Yashel KARA — Architecture of Silence</title>
+  <meta name="description" content="Yashel KARA — кинематографичная архитектура тишины, света и строгой редукции." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Prata&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260227" />
 </head>
 
-<body class="homePageAlt">
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="index.html">
-        <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
-      </a>
-
-      <nav class="nav">
-        <a class="is-current" href="index.html">Главная</a>
-        <a href="projects.html">Проекты</a>
-        <a href="about.html">О студии</a>
-        <a href="contact.html">Контакты</a>
-      </nav>
-
-      <button class="menuBtn" id="menuBtn" aria-label="Открыть меню">Меню</button>
-    </div>
-
-    <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <a href="index.html">Главная</a>
-      <a href="projects.html">Проекты</a>
-      <a href="about.html">О студии</a>
-      <a href="contact.html">Контакты</a>
-    </div>
-  </header>
-
+<body class="homeCinematic">
   <main>
-    <section class="altHero">
-      <div class="container altHero__inner">
-        <p class="altHero__kicker" data-reveal style="--reveal-delay:0ms;">YASHEL KARA / PRIVATE ARCHITECTURE</p>
-        <h1 data-reveal style="--reveal-delay:80ms;">Точная архитектура для частной жизни.</h1>
-        <p class="altHero__lead" data-reveal style="--reveal-delay:160ms;">
-          Проекты с ясной геометрией, выразительной тишиной и понятной конструктивной логикой.
+    <section class="cinemaHero" id="top">
+      <div class="cinemaHero__media parallaxMedia">
+        <img
+          class="parallaxMedia__img"
+          src="assets/cover.jpg"
+          alt="Дом на утесе на закате"
+          data-parallax
+          data-parallax-speed="0.12"
+        />
+      </div>
+      <div class="cinemaHero__shade"></div>
+
+      <div class="cinemaHero__topline container">
+        <a class="cinemaBrand" href="index.html">Yashel KARA</a>
+        <nav class="cinemaQuickNav" aria-label="Быстрая навигация">
+          <a href="projects.html">Проекты</a>
+          <a href="about.html">Студия</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+      </div>
+
+      <div class="cinemaHero__center container">
+        <h1>Architecture of Silence.</h1>
+      </div>
+
+      <a class="cinemaHero__scroll" href="#manifesto" aria-label="Прокрутить к манифесту">Scroll</a>
+    </section>
+
+    <section class="cinemaManifesto sectionGap" id="manifesto">
+      <div class="cinemaSectionWrap">
+        <figure class="manifestoVisual" data-reveal>
+          <img
+            src="assets/p2.jpg"
+            alt="Луч света на гладкой бетонной поверхности"
+            loading="lazy"
+          />
+        </figure>
+
+        <div class="manifestoContent">
+          <h2 data-reveal>НЕ ПУСТОТА.<br />ЯСНОСТЬ.</h2>
+          <p data-reveal style="--reveal-delay:90ms;">
+            Мы убираем несущественное, чтобы обнажить фундаментальное. Наши дома — это не просто убежища,
+            это инструменты для восприятия мира: рамы для света, природы и тишины. Мы проектируем пространство,
+            где разум отдыхает.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cinemaElements sectionGap">
+      <div class="cinemaSectionHeader" data-reveal>
+        <p>Элементы восприятия.</p>
+      </div>
+
+      <div class="cinemaElements__grid">
+        <article class="elementCard elementCard--light">
+          <figure class="elementCard__visual elementCard__visual--wide parallaxMedia" data-reveal>
+            <img
+              class="parallaxMedia__img"
+              src="assets/p1.jpg"
+              alt="Интерьер с выразительной геометрией света и теней"
+              loading="lazy"
+              data-parallax
+              data-parallax-speed="0.1"
+            />
+          </figure>
+          <p class="elementCard__text" data-reveal style="--reveal-delay:100ms;">
+            Свет как материал. Мы лепим пространство не стенами, а тем, как в него проникает солнце.
+          </p>
+        </article>
+
+        <article class="elementCard elementCard--matter">
+          <figure class="elementCard__visual elementCard__visual--macro parallaxMedia" data-reveal>
+            <img
+              class="parallaxMedia__img"
+              src="assets/p3.jpg"
+              alt="Фактура камня и дерева крупным планом"
+              loading="lazy"
+              data-parallax
+              data-parallax-speed="0.08"
+            />
+          </figure>
+          <p class="elementCard__text" data-reveal style="--reveal-delay:100ms;">
+            Тактильность. Честность материалов. Никакой имитации. Камень, дерево, бетон и стекло в их
+            первозданной красоте. Бескомпромиссное качество исполнения.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cinemaProject sectionGap">
+      <div class="cinemaProject__head">
+        <p class="cinemaProject__kicker" data-reveal>PROJECT 01</p>
+        <h2 data-reveal style="--reveal-delay:50ms;">HORIZON HOUSE</h2>
+        <p class="cinemaProject__lead" data-reveal style="--reveal-delay:120ms;">
+          Дом, растворяющий границу между океаном и жилищем.
         </p>
-        <div class="altHero__actions" data-reveal style="--reveal-delay:220ms;">
-          <a class="btn btn--solid" href="projects.html">Открыть портфолио</a>
-          <a class="btn" href="contact.html">Обсудить задачу</a>
-        </div>
       </div>
-    </section>
 
-    <section class="altMetrics">
-      <div class="container altMetrics__grid">
-        <article class="altMetric" data-reveal style="--reveal-delay:80ms;">
-          <p class="altMetric__value" data-site-text="projectsCount">0</p>
-          <p class="altMetric__label">проектов в каталоге</p>
-        </article>
-        <article class="altMetric" data-reveal style="--reveal-delay:140ms;">
-          <p class="altMetric__value" data-site-text="practiceYears">0</p>
-          <p class="altMetric__label">лет практики</p>
-        </article>
-        <article class="altMetric" data-reveal style="--reveal-delay:200ms;">
-          <p class="altMetric__value"><span data-site-text="architectureCount">0</span>/<span data-site-text="interiorCount">0</span></p>
-          <p class="altMetric__label">архитектура / интерьер</p>
-        </article>
-      </div>
-    </section>
+      <figure class="projectFrame projectFrame--wide parallaxMedia" data-reveal>
+        <img
+          class="parallaxMedia__img"
+          src="assets/cover.jpg"
+          alt="Horizon House в природном ландшафте"
+          loading="lazy"
+          data-parallax
+          data-parallax-speed="0.1"
+        />
+      </figure>
 
-    <section class="altProjects section">
-      <div class="container">
-        <div class="altProjects__head" data-reveal style="--reveal-delay:0ms;">
-          <h2>Избранные кейсы</h2>
-          <a class="btn btn--link" href="projects.html">Все проекты →</a>
-        </div>
-        <div class="altProjects__grid">
-          <a class="altProjectCard altProjectCard--wide" href="project.html?slug=raubichi-house" data-reveal style="--reveal-delay:110ms;">
-            <img src="assets/p1.jpg" alt="RAUBICHI HOUSE" />
-            <div class="altProjectCard__info">
-              <p class="altProjectCard__title">RAUBICHI HOUSE</p>
-              <p class="altProjectCard__meta">Architecture</p>
+      <div class="projectSplit">
+        <figure class="projectFrame projectFrame--tall" data-reveal>
+          <img src="assets/p1.jpg" alt="Фрагмент дома и бассейн, уходящий к горизонту" loading="lazy" />
+        </figure>
+
+        <aside class="projectData" data-reveal style="--reveal-delay:80ms;">
+          <dl>
+            <div>
+              <dt>Локация</dt>
+              <dd>Algarve, Portugal</dd>
             </div>
-          </a>
-          <a class="altProjectCard" href="project.html?slug=nemo" data-reveal style="--reveal-delay:180ms;">
-            <img src="assets/p3.jpg" alt="NEMO" />
-            <div class="altProjectCard__info">
-              <p class="altProjectCard__title">NEMO</p>
-              <p class="altProjectCard__meta">Architecture</p>
+            <div>
+              <dt>Площадь</dt>
+              <dd>450m²</dd>
             </div>
-          </a>
-          <a class="altProjectCard" href="project.html?slug=interior-01" data-reveal style="--reveal-delay:240ms;">
-            <img src="assets/p2.jpg" alt="INTERIOR 01" />
-            <div class="altProjectCard__info">
-              <p class="altProjectCard__title">INTERIOR 01</p>
-              <p class="altProjectCard__meta">Interior</p>
+            <div>
+              <dt>Год</dt>
+              <dd>2024</dd>
             </div>
+          </dl>
+          <p>
+            Задача состояла в том, чтобы создать дом, который исчезает, когда вы находитесь внутри.
+            Панорамное остекление длиной 30 метров стирает грань между интерьером и Атлантикой.
+          </p>
+        </aside>
+      </div>
+
+      <figure class="projectFrame projectFrame--wide parallaxMedia" data-reveal>
+        <img
+          class="parallaxMedia__img"
+          src="assets/p2.jpg"
+          alt="Интерьер Horizon House"
+          loading="lazy"
+          data-parallax
+          data-parallax-speed="0.07"
+        />
+      </figure>
+
+      <a class="cinemaTextLink" href="project.html?slug=raubichi-house" data-reveal>Смотреть кейс целиком →</a>
+    </section>
+
+    <section class="cinemaPortfolio sectionGap">
+      <div class="cinemaSectionHeader cinemaSectionHeader--left" data-reveal>
+        <h2>Избранные проекты.</h2>
+      </div>
+
+      <div class="portfolioTop">
+        <a class="portfolioCard portfolioCard--large" href="project.html?slug=raubichi-house" data-reveal>
+          <img src="assets/p1.jpg" alt="Forest Pavilion" loading="lazy" />
+          <p>Forest Pavilion — Ålesund, Norway</p>
+        </a>
+
+        <div class="portfolioStack">
+          <a class="portfolioCard" href="project.html?slug=nemo" data-reveal style="--reveal-delay:70ms;">
+            <img src="assets/p3.jpg" alt="Cliff Residence" loading="lazy" />
+            <p>Cliff Residence — Algarve, Portugal</p>
+          </a>
+          <a class="portfolioCard" href="project.html?slug=interior-01" data-reveal style="--reveal-delay:140ms;">
+            <img src="assets/p2.jpg" alt="Atrium House" loading="lazy" />
+            <p>Atrium House — Lausanne, Switzerland</p>
           </a>
         </div>
       </div>
-    </section>
 
-    <section class="altMethod section">
-      <div class="container">
-        <div class="altMethod__head" data-reveal style="--reveal-delay:0ms;">
-          <h2>Процесс без шума</h2>
-        </div>
-        <div class="altMethod__steps">
-          <article class="altStep" data-reveal style="--reveal-delay:90ms;">
-            <p class="altStep__num">01</p>
-            <h3>Аналитика</h3>
-            <p>Участок, свет, сценарии жизни, бюджет и приоритеты семьи.</p>
-          </article>
-          <article class="altStep" data-reveal style="--reveal-delay:160ms;">
-            <p class="altStep__num">02</p>
-            <h3>Концепция</h3>
-            <p>Планировочная логика, пластика объемов, палитра материалов и света.</p>
-          </article>
-          <article class="altStep" data-reveal style="--reveal-delay:230ms;">
-            <p class="altStep__num">03</p>
-            <h3>Реализация</h3>
-            <p>Рабочая документация, авторский контроль и сопровождение на площадке.</p>
-          </article>
-        </div>
+      <div class="portfolioBottom">
+        <a class="portfolioCard" href="project.html?slug=raubichi-house" data-reveal>
+          <img src="assets/cover.jpg" alt="Monolith Villa" loading="lazy" />
+          <p>Monolith Villa — Ibiza, Spain</p>
+        </a>
+        <a class="portfolioCard" href="project.html?slug=nemo" data-reveal style="--reveal-delay:60ms;">
+          <img src="assets/p1.jpg" alt="Lake Retreat" loading="lazy" />
+          <p>Lake Retreat — Como, Italy</p>
+        </a>
+        <a class="portfolioCard" href="project.html?slug=interior-01" data-reveal style="--reveal-delay:120ms;">
+          <img src="assets/p3.jpg" alt="Cedar Courtyard" loading="lazy" />
+          <p>Cedar Courtyard — Kyoto, Japan</p>
+        </a>
       </div>
+
+      <a class="cinemaTextLink" href="projects.html" data-reveal>Все проекты студии →</a>
     </section>
 
-    <section class="altCall section">
-      <div class="container">
-        <div class="altCall__panel" data-reveal style="--reveal-delay:0ms;">
-          <p>Запрос на проект</p>
-          <h2>Напишите и мы подготовим рабочую стратегию под ваш участок и образ жизни.</h2>
-          <div class="altCall__links">
-            <a data-site-href="email" data-site-text="email" href="mailto:hello@example.com">hello@example.com</a>
-            <a data-site-href="phone" data-site-text="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
-          </div>
+    <section class="cinemaRigor sectionGap">
+      <div class="cinemaSectionWrap cinemaSectionWrap--rigor">
+        <div class="rigorHead">
+          <h2 data-reveal>ДИСЦИПЛИНА РЕДУКЦИИ.</h2>
+        </div>
+
+        <figure class="rigorVisual parallaxMedia" data-reveal>
+          <img
+            class="parallaxMedia__img"
+            src="assets/p2.jpg"
+            alt="Студийный рабочий стол архитектора"
+            loading="lazy"
+            data-parallax
+            data-parallax-speed="0.06"
+          />
+        </figure>
+
+        <div class="rigorColumns">
+          <p data-reveal>
+            Проектирование — это процесс бесконечного вопрошания. Мы не добавляем, мы отсекаем.
+            Каждая линия должна быть оправдана функцией или смыслом.
+          </p>
+          <p data-reveal style="--reveal-delay:80ms;">
+            Мы работаем медленно. Мы берем ограниченное количество проектов в год, чтобы гарантировать
+            бескомпромиссное внимание к каждой детали, от фундамента до дверной ручки.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer footer--home">
-    <div class="container footer__inner">
-      <div class="muted small">© <span id="year"></span> Studio</div>
-      <div class="muted small"><a data-site-href="email" data-site-text="email" href="mailto:hello@example.com">hello@example.com</a></div>
+  <footer class="cinemaFooter">
+    <div class="cinemaFooter__inner">
+      <a class="cinemaFooter__brand" href="index.html">Yashel KARA</a>
+
+      <div class="cinemaFooter__contacts">
+        <a href="mailto:hello@yashelkara.com">hello@yashelkara.com</a>
+        <a href="tel:+41225550109">+41 22 555 01 09</a>
+        <p>Zürich, Switzerland</p>
+        <div class="cinemaFooter__socials">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
     </div>
   </footer>
 
