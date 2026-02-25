@@ -1,70 +1,65 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Проекты — Портфолио</title>
-  <meta name="description" content="Все проекты: архитектура и интерьер." />
+  <title>Projects — Yashel KARA</title>
+  <meta name="description" content="Architecture and interior portfolio by Yashel KARA." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Prata&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260227" />
 </head>
 
-<body class="catalogPage">
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="index.html">
-        <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
-      </a>
+<body class="homeReference refInnerPage refProjectsPage">
+  <header class="homeRefTopbar">
+    <div class="homeRefTopbar__inner">
+      <a class="homeRefBrand" href="index.html">Yashel KARA</a>
 
-      <nav class="nav">
-        <a href="index.html">Главная</a>
-        <a class="is-current" href="projects.html">Проекты</a>
-        <a href="about.html">О студии</a>
-        <a href="contact.html">Контакты</a>
+      <nav class="homeRefNav" aria-label="Primary navigation">
+        <a class="is-current" href="projects.html">Projects</a>
+        <a href="about.html">Studio</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Открыть меню">Меню</button>
+      <button class="homeRefMenuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
     </div>
 
-    <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <a href="index.html">Главная</a>
-      <a href="projects.html">Проекты</a>
-      <a href="about.html">О студии</a>
-      <a href="contact.html">Контакты</a>
-    </div>
+    <nav class="homeRefMobileNav" id="mobileNav" aria-hidden="true" aria-label="Mobile navigation">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="catalogHero">
-      <div class="container catalogHero__inner">
-        <p class="homeKicker homeKicker--dark">PORTFOLIO</p>
-        <h1>Проекты студии</h1>
-        <p>Структурированный каталог реализованных и разработанных пространств: архитектура и интерьер.</p>
-      </div>
+  <main class="refPageMain">
+    <section class="refPageIntro" aria-label="Portfolio intro">
+      <p class="refPageKicker">Portfolio</p>
+      <h1>Projects</h1>
+      <p>Structured selection of architecture and interior work by the studio.</p>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="projectsHeader projectsHeader--catalog">
-          <div class="tabs" role="tablist" aria-label="Фильтр проектов">
-            <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
-            <button class="tab" data-filter="architecture" role="tab" aria-selected="false">Архитектура</button>
-            <button class="tab" data-filter="interior" role="tab" aria-selected="false">Интерьер</button>
+    <section class="refProjectsSection">
+      <div class="refProjectsSection__inner">
+        <div class="refProjectsToolbar">
+          <div class="tabs" role="tablist" aria-label="Project filter">
+            <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="tab" data-filter="architecture" role="tab" aria-selected="false">Architecture</button>
+            <button class="tab" data-filter="interior" role="tab" aria-selected="false">Interior</button>
           </div>
-          <a class="btn btn--link" href="contact.html">Обсудить ваш проект →</a>
+
+          <a class="refInlineLink" href="contact.html">Discuss your project ↗</a>
         </div>
 
-        <div class="projectsGrid projectsGrid--catalog" id="projectsGrid" aria-live="polite"></div>
+        <div class="projectsGrid" id="projectsGrid" aria-live="polite"></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer footer--home">
-    <div class="container footer__inner">
-      <div class="muted small">© <span id="year"></span> Studio</div>
-      <div class="muted small"><a data-site-href="email" data-site-text="email" href="mailto:hello@example.com">hello@example.com</a></div>
+  <footer class="refFooter">
+    <div class="refFooter__inner">
+      <p>© <span id="year"></span> Yashel KARA</p>
+      <a data-site-href="email" data-site-text="email" href="mailto:hello@example.com">hello@example.com</a>
     </div>
   </footer>
 

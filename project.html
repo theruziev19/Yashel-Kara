@@ -1,56 +1,48 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Проект — Портфолио</title>
-  <meta name="description" content="Страница проекта: описание, характеристики, галерея." />
+  <title>Project — Yashel KARA</title>
+  <meta name="description" content="Project details, metrics, and gallery." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Prata&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260227" />
 </head>
 
-<body class="projectShowcasePage">
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="index.html">
-        <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
-      </a>
+<body class="homeReference refInnerPage refProjectPage">
+  <header class="homeRefTopbar">
+    <div class="homeRefTopbar__inner">
+      <a class="homeRefBrand" href="index.html">Yashel KARA</a>
 
-      <nav class="nav">
-        <a href="index.html">Главная</a>
-        <a href="projects.html">Проекты</a>
-        <a href="about.html">О студии</a>
-        <a href="contact.html">Контакты</a>
+      <nav class="homeRefNav" aria-label="Primary navigation">
+        <a class="is-current" href="projects.html">Projects</a>
+        <a href="about.html">Studio</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
-      <div class="projectTopbar__actions">
-        <a class="btn btn--link" href="projects.html">← Все проекты</a>
-        <button class="menuBtn" id="menuBtn" aria-label="Открыть меню">Меню</button>
-      </div>
+      <button class="homeRefMenuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
     </div>
 
-    <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <a href="index.html">Главная</a>
-      <a href="projects.html">Проекты</a>
-      <a href="about.html">О студии</a>
-      <a href="contact.html">Контакты</a>
-    </div>
+    <nav class="homeRefMobileNav" id="mobileNav" aria-hidden="true" aria-label="Mobile navigation">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="projectEditorial">
+  <main class="projectEditorial refProjectMain">
     <section class="projectEditorial__left">
       <div class="projectEditorial__leftInner">
-        <p class="projectEditorial__kicker" id="pTypeLabel">АРХИТЕКТУРНЫЙ ПРОЕКТ</p>
+        <p class="projectEditorial__kicker" id="pTypeLabel">ARCHITECTURE</p>
         <h1 class="projectEditorial__title" id="pTitle">—</h1>
-        <div class="projectEditorial__accent" aria-hidden="true"></div>
         <p class="projectEditorial__tagline" id="pTagline">—</p>
 
-        <nav class="projectEditorial__crumbs" aria-label="Хлебные крошки">
-          <a href="index.html">Главная</a>
+        <nav class="projectEditorial__crumbs" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
           <span>/</span>
-          <a href="projects.html">Проекты</a>
+          <a href="projects.html">Projects</a>
           <span>/</span>
           <span id="pBreadcrumbCurrent">—</span>
         </nav>
@@ -58,19 +50,19 @@
         <ul class="projectEditorial__facts" id="pFacts"></ul>
 
         <section class="projectEditorial__section">
-          <h2 class="projectEditorial__sectionTitle">Описание проекта</h2>
+          <h2 class="projectEditorial__sectionTitle">Project Narrative</h2>
           <div class="projectEditorial__text" id="pNarrative">
             <p class="muted">—</p>
           </div>
         </section>
 
         <section class="projectEditorial__section" id="pLayoutSection">
-          <h2 class="projectEditorial__sectionTitle">Планировочное решение</h2>
+          <h2 class="projectEditorial__sectionTitle">Layout Strategy</h2>
           <div class="projectEditorial__plans" id="pPlans"></div>
         </section>
 
         <section class="projectEditorial__section projectEditorial__section--cta">
-          <a class="btn btn--solid" href="contact.html">Обсудить ваш проект</a>
+          <a class="refPrimaryBtn" href="contact.html">Discuss your project</a>
         </section>
       </div>
     </section>
@@ -80,10 +72,10 @@
     </section>
   </main>
 
-  <footer class="footer footer--home">
-    <div class="container footer__inner">
-      <div class="muted small">© <span id="year"></span> Studio</div>
-      <div class="muted small"><a href="projects.html">Все проекты →</a></div>
+  <footer class="refFooter">
+    <div class="refFooter__inner">
+      <p>© <span id="year"></span> Yashel KARA</p>
+      <a href="projects.html">All projects</a>
     </div>
   </footer>
 

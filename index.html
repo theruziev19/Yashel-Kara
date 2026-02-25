@@ -1,258 +1,140 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yashel KARA — Architecture of Silence</title>
-  <meta name="description" content="Yashel KARA — кинематографичная архитектура тишины, света и строгой редукции." />
+  <title>Yashel KARA</title>
+  <meta name="description" content="Yashel KARA — sculpting light through reductive architecture." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260227" />
 </head>
 
-<body class="homeCinematic">
-  <main>
-    <section class="cinemaHero" id="top">
-      <div class="cinemaHero__media parallaxMedia">
-        <img
-          class="parallaxMedia__img"
-          src="assets/scene-01.jpg"
-          alt="Дом на утесе на закате"
-          data-parallax
-          data-parallax-speed="0.12"
-        />
-      </div>
-      <div class="cinemaHero__shade"></div>
+<body class="homeReference">
+  <header class="homeRefTopbar">
+    <div class="homeRefTopbar__inner">
+      <a class="homeRefBrand" href="index.html">Yashel KARA</a>
 
-      <div class="cinemaHero__topline container">
-        <a class="cinemaBrand" href="index.html">Yashel KARA</a>
-        <nav class="cinemaQuickNav" aria-label="Быстрая навигация">
-          <a href="projects.html">Проекты</a>
-          <a href="about.html">Студия</a>
-          <a href="contact.html">Контакты</a>
-        </nav>
-      </div>
+      <nav class="homeRefNav" aria-label="Primary navigation">
+        <a href="projects.html">Projects</a>
+        <a href="about.html">Studio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-      <div class="cinemaHero__center container">
-        <h1>Architecture of Silence.</h1>
-      </div>
+      <button class="homeRefMenuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
+    </div>
 
-      <a class="cinemaHero__scroll" href="#manifesto" aria-label="Прокрутить к манифесту">Scroll</a>
+    <nav class="homeRefMobileNav" id="mobileNav" aria-hidden="true" aria-label="Mobile navigation">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="homeRefMain">
+    <section class="homeRefHero" aria-label="Main visual">
+      <img src="assets/scene-01.jpg" alt="Minimalist concrete villa" />
+      <h1>SCULPTING LIGHT.</h1>
     </section>
 
-    <section class="cinemaManifesto sectionGap" id="manifesto">
-      <div class="cinemaSectionWrap">
-        <figure class="manifestoVisual" data-reveal>
-          <img
-            src="assets/scene-02.jpg"
-            alt="Луч света на гладкой бетонной поверхности"
-            loading="lazy"
-          />
-        </figure>
+    <section class="homeRefPhilosophy" aria-label="Studio philosophy">
+      <h2 class="homeRefPhilosophy__title">OUR<br />PHILOSOPHY</h2>
 
-        <div class="manifestoContent">
-          <h2 data-reveal>НЕ ПУСТОТА.<br />ЯСНОСТЬ.</h2>
-          <p data-reveal style="--reveal-delay:90ms;">
-            Мы убираем несущественное, чтобы обнажить фундаментальное. Наши дома — это не просто убежища,
-            это инструменты для восприятия мира: рамы для света, природы и тишины. Мы проектируем пространство,
-            где разум отдыхает.
-          </p>
+      <p class="homeRefPhilosophy__text">
+        We believe that architecture is not about adding, but about removing.
+        We sculpt space using light, shadow, and raw materials.
+      </p>
+
+      <p class="homeRefPhilosophy__text">
+        Our mission is to create environments that define silence and clarity.
+      </p>
+
+      <a class="homeRefPhilosophy__cta" href="projects.html">
+        <span>EXPLORE OUR WORK</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section class="homeRefMethod" aria-label="Studio method">
+      <div class="homeRefMethod__inner">
+        <h2>METHOD</h2>
+
+        <div class="homeRefMethod__grid">
+          <article class="homeRefMethodCard">
+            <p class="homeRefMethodCard__num">01</p>
+            <h3>Context</h3>
+            <p>We read site geometry, climate and daily rituals before sketching form.</p>
+          </article>
+
+          <article class="homeRefMethodCard">
+            <p class="homeRefMethodCard__num">02</p>
+            <h3>Reduction</h3>
+            <p>We remove noise until only clear spatial logic and material honesty remain.</p>
+          </article>
+
+          <article class="homeRefMethodCard">
+            <p class="homeRefMethodCard__num">03</p>
+            <h3>Precision</h3>
+            <p>Every line and junction is refined for calm perception and lasting quality.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="cinemaElements sectionGap">
-      <div class="cinemaSectionHeader" data-reveal>
-        <p>Элементы восприятия.</p>
-      </div>
-
-      <div class="cinemaElements__grid">
-        <article class="elementCard elementCard--light">
-          <figure class="elementCard__visual elementCard__visual--wide parallaxMedia" data-reveal>
-            <img
-              class="parallaxMedia__img"
-              src="assets/scene-03.jpg"
-              alt="Интерьер с выразительной геометрией света и теней"
-              loading="lazy"
-              data-parallax
-              data-parallax-speed="0.1"
-            />
-          </figure>
-          <p class="elementCard__text" data-reveal style="--reveal-delay:100ms;">
-            Свет как материал. Мы лепим пространство не стенами, а тем, как в него проникает солнце.
-          </p>
-        </article>
-
-        <article class="elementCard elementCard--matter">
-          <figure class="elementCard__visual elementCard__visual--macro parallaxMedia" data-reveal>
-            <img
-              class="parallaxMedia__img"
-              src="assets/p3.jpg"
-              alt="Фактура камня и дерева крупным планом"
-              loading="lazy"
-              data-parallax
-              data-parallax-speed="0.08"
-            />
-          </figure>
-          <p class="elementCard__text" data-reveal style="--reveal-delay:100ms;">
-            Тактильность. Честность материалов. Никакой имитации. Камень, дерево, бетон и стекло в их
-            первозданной красоте. Бескомпромиссное качество исполнения.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cinemaProject sectionGap">
-      <div class="cinemaProject__head">
-        <p class="cinemaProject__kicker" data-reveal>PROJECT 01</p>
-        <h2 data-reveal style="--reveal-delay:50ms;">HORIZON HOUSE</h2>
-        <p class="cinemaProject__lead" data-reveal style="--reveal-delay:120ms;">
-          Дом, растворяющий границу между океаном и жилищем.
-        </p>
-      </div>
-
-      <figure class="projectFrame projectFrame--wide parallaxMedia" data-reveal>
-        <img
-          class="parallaxMedia__img"
-          src="assets/scene-02.jpg"
-          alt="Horizon House в природном ландшафте"
-          loading="lazy"
-          data-parallax
-          data-parallax-speed="0.1"
-        />
-      </figure>
-
-      <div class="projectSplit">
-        <figure class="projectFrame projectFrame--tall" data-reveal>
-          <img src="assets/p1.jpg" alt="Фрагмент дома и бассейн, уходящий к горизонту" loading="lazy" />
-        </figure>
-
-        <aside class="projectData" data-reveal style="--reveal-delay:80ms;">
-          <dl>
-            <div>
-              <dt>Локация</dt>
-              <dd>Algarve, Portugal</dd>
-            </div>
-            <div>
-              <dt>Площадь</dt>
-              <dd>450m²</dd>
-            </div>
-            <div>
-              <dt>Год</dt>
-              <dd>2024</dd>
-            </div>
-          </dl>
-          <p>
-            Задача состояла в том, чтобы создать дом, который исчезает, когда вы находитесь внутри.
-            Панорамное остекление длиной 30 метров стирает грань между интерьером и Атлантикой.
-          </p>
-        </aside>
-      </div>
-
-      <figure class="projectFrame projectFrame--wide parallaxMedia" data-reveal>
-        <img
-          class="parallaxMedia__img"
-          src="assets/scene-01.jpg"
-          alt="Интерьер Horizon House"
-          loading="lazy"
-          data-parallax
-          data-parallax-speed="0.07"
-        />
-      </figure>
-
-      <a class="cinemaTextLink" href="project.html?slug=raubichi-house" data-reveal>Смотреть кейс целиком →</a>
-    </section>
-
-    <section class="cinemaPortfolio sectionGap">
-      <div class="cinemaSectionHeader cinemaSectionHeader--left" data-reveal>
-        <h2>Избранные проекты.</h2>
-      </div>
-
-      <div class="portfolioTop">
-        <a class="portfolioCard portfolioCard--large" href="project.html?slug=raubichi-house" data-reveal>
-          <img src="assets/scene-01.jpg" alt="Forest Pavilion" loading="lazy" />
-          <p>Forest Pavilion — Ålesund, Norway</p>
-        </a>
-
-        <div class="portfolioStack">
-          <a class="portfolioCard" href="project.html?slug=nemo" data-reveal style="--reveal-delay:70ms;">
-            <img src="assets/scene-02.jpg" alt="Cliff Residence" loading="lazy" />
-            <p>Cliff Residence — Algarve, Portugal</p>
+    <section class="homeRefShowcase" aria-label="Selected projects">
+      <div class="homeRefShowcase__inner">
+        <div class="homeRefShowcase__head">
+          <h2>SELECTED WORK</h2>
+          <a class="homeRefPhilosophy__cta homeRefPhilosophy__cta--compact" href="projects.html">
+            <span>VIEW ALL PROJECTS</span>
+            <span aria-hidden="true">↗</span>
           </a>
-          <a class="portfolioCard" href="project.html?slug=interior-01" data-reveal style="--reveal-delay:140ms;">
-            <img src="assets/scene-03.jpg" alt="Atrium House" loading="lazy" />
-            <p>Atrium House — Lausanne, Switzerland</p>
+        </div>
+
+        <div class="homeRefShowcase__grid">
+          <a class="homeRefShowcaseCard homeRefShowcaseCard--wide" href="project.html?slug=raubichi-house">
+            <img src="assets/scene-02.jpg" alt="Raubichi House exterior view" loading="lazy" />
+            <div>
+              <p>RAUBICHI HOUSE</p>
+              <span>Belarus</span>
+            </div>
+          </a>
+
+          <a class="homeRefShowcaseCard" href="project.html?slug=nemo">
+            <img src="assets/scene-03.jpg" alt="Nemo project exterior view" loading="lazy" />
+            <div>
+              <p>NEMO</p>
+              <span>Portugal</span>
+            </div>
+          </a>
+
+          <a class="homeRefShowcaseCard" href="project.html?slug=interior-01">
+            <img src="assets/p1.jpg" alt="Interior 01 project interior" loading="lazy" />
+            <div>
+              <p>INTERIOR 01</p>
+              <span>Czechia</span>
+            </div>
           </a>
         </div>
       </div>
-
-      <div class="portfolioBottom">
-        <a class="portfolioCard" href="project.html?slug=raubichi-house" data-reveal>
-          <img src="assets/scene-03.jpg" alt="Monolith Villa" loading="lazy" />
-          <p>Monolith Villa — Ibiza, Spain</p>
-        </a>
-        <a class="portfolioCard" href="project.html?slug=nemo" data-reveal style="--reveal-delay:60ms;">
-          <img src="assets/p1.jpg" alt="Lake Retreat" loading="lazy" />
-          <p>Lake Retreat — Como, Italy</p>
-        </a>
-        <a class="portfolioCard" href="project.html?slug=interior-01" data-reveal style="--reveal-delay:120ms;">
-          <img src="assets/p3.jpg" alt="Cedar Courtyard" loading="lazy" />
-          <p>Cedar Courtyard — Kyoto, Japan</p>
-        </a>
-      </div>
-
-      <a class="cinemaTextLink" href="projects.html" data-reveal>Все проекты студии →</a>
     </section>
 
-    <section class="cinemaRigor sectionGap">
-      <div class="cinemaSectionWrap cinemaSectionWrap--rigor">
-        <div class="rigorHead">
-          <h2 data-reveal>ДИСЦИПЛИНА РЕДУКЦИИ.</h2>
-        </div>
-
-        <figure class="rigorVisual parallaxMedia" data-reveal>
-          <img
-            class="parallaxMedia__img"
-            src="assets/scene-02.jpg"
-            alt="Студийный рабочий стол архитектора"
-            loading="lazy"
-            data-parallax
-            data-parallax-speed="0.06"
-          />
-        </figure>
-
-        <div class="rigorColumns">
-          <p data-reveal>
-            Проектирование — это процесс бесконечного вопрошания. Мы не добавляем, мы отсекаем.
-            Каждая линия должна быть оправдана функцией или смыслом.
-          </p>
-          <p data-reveal style="--reveal-delay:80ms;">
-            Мы работаем медленно. Мы берем ограниченное количество проектов в год, чтобы гарантировать
-            бескомпромиссное внимание к каждой детали, от фундамента до дверной ручки.
-          </p>
-        </div>
+    <section class="homeRefFinal" aria-label="Contact call to action">
+      <div class="homeRefFinal__inner">
+        <p>Minimal architecture for quiet living.</p>
+        <a href="contact.html">Start Your Project ↗</a>
       </div>
     </section>
   </main>
 
-  <footer class="cinemaFooter">
-    <div class="cinemaFooter__inner">
-      <a class="cinemaFooter__brand" href="index.html">Yashel KARA</a>
-
-      <div class="cinemaFooter__contacts">
-        <a href="mailto:hello@yashelkara.com">hello@yashelkara.com</a>
-        <a href="tel:+41225550109">+41 22 555 01 09</a>
-        <p>Zürich, Switzerland</p>
-        <div class="cinemaFooter__socials">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </div>
+  <footer class="homeRefFooter">
+    <div class="homeRefFooter__inner">
+      <p>© <span id="year"></span> Yashel KARA</p>
+      <a href="projects.html">Projects</a>
     </div>
   </footer>
 
-  <script type="module" src="js/site.js?v=20260227"></script>
   <script type="module" src="js/main.js?v=20260227"></script>
 </body>
 </html>

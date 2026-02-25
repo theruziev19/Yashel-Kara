@@ -1,57 +1,74 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>О студии — Портфолио</title>
+  <title>Studio — Yashel KARA</title>
+  <meta name="description" content="Studio philosophy and process by Yashel KARA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260227" />
 </head>
 
-<body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="index.html">
-        <span class="brand__name">Yashel</span> <span class="brand__surname">KARA</span>
-      </a>
+<body class="homeReference refInnerPage refAboutPage">
+  <header class="homeRefTopbar">
+    <div class="homeRefTopbar__inner">
+      <a class="homeRefBrand" href="index.html">Yashel KARA</a>
 
-      <nav class="nav">
-        <a href="projects.html">Проекты</a>
-        <a class="is-current" href="about.html">О студии</a>
-        <a href="contact.html">Контакты</a>
+      <nav class="homeRefNav" aria-label="Primary navigation">
+        <a href="projects.html">Projects</a>
+        <a class="is-current" href="about.html">Studio</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Открыть меню">Меню</button>
+      <button class="homeRefMenuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
     </div>
 
-    <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <a href="projects.html">Проекты</a>
-      <a href="about.html">О студии</a>
-      <a href="contact.html">Контакты</a>
-    </div>
+    <nav class="homeRefMobileNav" id="mobileNav" aria-hidden="true" aria-label="Mobile navigation">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="section section--beige">
-    <div class="container about">
-      <h1 class="huge">ДИСЦИПЛИНА<br/>РЕДУКЦИИ.</h1>
-      <p class="lead">Отбрасываем случайное — оставляем точное: свет, планировка, пропорции.</p>
-      <p class="muted">Работаем с частными домами и интерьерами: концепция, проектирование, сопровождение.</p>
+  <main class="refPageMain">
+    <section class="refPageIntro" aria-label="Studio intro">
+      <p class="refPageKicker">Studio</p>
+      <h1>Discipline of Reduction.</h1>
+      <p>We remove everything non-essential to reveal clarity, light, and proportion.</p>
+    </section>
 
-      <div class="facts">
-        <div class="fact"><div class="fact__k">Услуги</div><div class="fact__v">архитектура · интерьер · документация</div></div>
-        <div class="fact"><div class="fact__k">Сроки</div><div class="fact__v">от 2 до 10 недель</div></div>
-        <div class="fact"><div class="fact__k">Формат</div><div class="fact__v">онлайн / офлайн</div></div>
-      </div>
+    <section class="refAboutSection">
+      <div class="refAboutSection__inner">
+        <h2>Our Philosophy</h2>
 
-      <div style="margin-top:18px">
-        <a class="btn" href="contact.html">Связаться →</a>
+        <div class="refAboutColumns">
+          <p>
+            Architecture is not about adding more. It is about finding the precise structure of space,
+            where each line has purpose and each material has integrity.
+          </p>
+          <p>
+            We design private homes and interiors with a calm, reductive language.
+            Light, shadow, rhythm and raw materials shape every project decision.
+          </p>
+        </div>
+
+        <div class="refAboutFacts">
+          <div class="refAboutFact"><span>Services</span><span>Architecture · Interiors · Project supervision</span></div>
+          <div class="refAboutFact"><span>Project pace</span><span>Limited yearly intake for deep focus on detail</span></div>
+          <div class="refAboutFact"><span>Workflow</span><span>Concept · Design development · Documentation</span></div>
+        </div>
+
+        <a class="refInlineLink refInlineLink--large" href="contact.html">Start a project ↗</a>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="muted small">© <span id="year"></span> Studio</div>
-      <div class="muted small"><a href="projects.html">Проекты →</a></div>
+  <footer class="refFooter">
+    <div class="refFooter__inner">
+      <p>© <span id="year"></span> Yashel KARA</p>
+      <a href="projects.html">View projects</a>
     </div>
   </footer>
 

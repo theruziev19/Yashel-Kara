@@ -74,6 +74,7 @@ if (revealItems.length) {
 
 // Cinematic parallax + hero dimming
 const heroSection = document.querySelector(".cinemaHero");
+const cinemaTopline = document.querySelector(".cinemaHero__topline");
 const parallaxItems = motionReduced
   ? []
   : [...document.querySelectorAll("[data-parallax]")];
@@ -92,6 +93,9 @@ if (heroSection || parallaxItems.length) {
         1
       );
       heroSection.style.setProperty("--hero-progress", progress.toFixed(3));
+      if (cinemaTopline) {
+        cinemaTopline.classList.toggle("is-contrast", progress > 0.18);
+      }
     }
 
     parallaxItems.forEach((node) => {
