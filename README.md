@@ -1,4 +1,4 @@
-https://theruziev19.github.io/Yashel-Kara/
+Your site is live at https://theruziev19.github.io/yashel-kara/
 
 ## Как запустить локально
 
