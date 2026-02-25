@@ -4,7 +4,7 @@ export const projects = [
     title: "RAUBICHI HOUSE",
     typeLabel: "АРХИТЕКТУРНЫЙ ПРОЕКТ",
     category: "architecture",
-    cover: "assets/p1.jpg",
+    cover: "assets/scene-01.jpg",
     tagline: "Чёткая геометрия и приватность со стороны улицы.",
     meta: { location: "Raubichi, Belarus", area: "240 м²", year: "2022", role: "Architecture" },
     quote: "НЕ ПУСТОТА.\nЯСНОСТЬ.",
@@ -37,14 +37,14 @@ export const projects = [
         ]
       }
     ],
-    gallery: ["assets/p1.jpg","assets/p2.jpg","assets/p3.jpg","assets/p1.jpg","assets/p2.jpg"]
+    gallery: ["assets/scene-01.jpg","assets/p2.jpg","assets/scene-02.jpg","assets/p1.jpg","assets/scene-03.jpg"]
   },
   {
     slug: "community-houses",
     title: "COMMUNITY HOUSES",
     typeLabel: "АРХИТЕКТУРНЫЙ ПРОЕКТ",
     category: "architecture",
-    cover: "assets/p2.jpg",
+    cover: "assets/scene-02.jpg",
     tagline: "Павильонный дом в лесу, дерево и стекло.",
     meta: { location: "Lisbon, Portugal", area: "96 м²", year: "2023", role: "Architecture" },
     quote: "ТИШИНА —\nЭТО МАТЕРИАЛ.",
@@ -77,14 +77,14 @@ export const projects = [
         ]
       }
     ],
-    gallery: ["assets/p2.jpg","assets/p3.jpg","assets/p1.jpg","assets/p2.jpg","assets/p1.jpg"]
+    gallery: ["assets/scene-02.jpg","assets/p3.jpg","assets/scene-01.jpg","assets/p2.jpg","assets/scene-03.jpg"]
   },
   {
     slug: "nemo",
     title: "NEMO",
     typeLabel: "АРХИТЕКТУРНЫЙ ПРОЕКТ",
     category: "architecture",
-    cover: "assets/p3.jpg",
+    cover: "assets/scene-03.jpg",
     tagline: "Дом с панорамным открытием террасы.",
     meta: { location: "Algarve, Portugal", area: "180 м²", year: "2024", role: "Architecture" },
     quote: "СВЕТ.\nПРОПОРЦИЯ.\nРИТМ.",
@@ -117,14 +117,14 @@ export const projects = [
         ]
       }
     ],
-    gallery: ["assets/p3.jpg","assets/p1.jpg","assets/p2.jpg","assets/p3.jpg","assets/p2.jpg"]
+    gallery: ["assets/scene-03.jpg","assets/scene-02.jpg","assets/p2.jpg","assets/p3.jpg","assets/scene-01.jpg"]
   },
   {
     slug: "three-house",
     title: "3.00 HOUSE",
     typeLabel: "АРХИТЕКТУРНЫЙ ПРОЕКТ",
     category: "architecture",
-    cover: "assets/p1.jpg",
+    cover: "assets/scene-01.jpg",
     tagline: "Деревянная оболочка и глубокая тень.",
     meta: { location: "Riga, Latvia", area: "165 м²", year: "2021", role: "Architecture" },
     quote: "РЕДУКЦИЯ.\nДИСЦИПЛИНА.",
@@ -157,14 +157,14 @@ export const projects = [
         ]
       }
     ],
-    gallery: ["assets/p1.jpg","assets/p2.jpg","assets/p3.jpg","assets/p1.jpg","assets/p2.jpg"]
+    gallery: ["assets/scene-01.jpg","assets/p1.jpg","assets/scene-02.jpg","assets/p3.jpg","assets/scene-03.jpg"]
   },
   {
     slug: "interior-01",
     title: "INTERIOR 01",
     typeLabel: "ИНТЕРЬЕР",
     category: "interior",
-    cover: "assets/p2.jpg",
+    cover: "assets/scene-02.jpg",
     tagline: "Светлый интерьер с мягкими фактурами.",
     meta: { location: "Prague, Czechia", area: "120 м²", year: "2024", role: "Interior" },
     quote: "ТИШИНА\nВ ДЕТАЛЯХ.",
@@ -197,6 +197,6 @@ export const projects = [
         ]
       }
     ],
-    gallery: ["assets/p2.jpg","assets/p3.jpg","assets/p2.jpg","assets/p1.jpg","assets/p3.jpg"]
+    gallery: ["assets/scene-02.jpg","assets/p2.jpg","assets/scene-03.jpg","assets/p1.jpg","assets/scene-01.jpg"]
   },
 ];
