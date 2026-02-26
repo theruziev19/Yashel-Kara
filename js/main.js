@@ -123,3 +123,28 @@ if (heroSection || parallaxItems.length) {
   window.addEventListener("scroll", queueUpdate, { passive: true });
   window.addEventListener("resize", queueUpdate);
 }
+
+// Map vertical mouse-wheel to horizontal scrolling in Selected Work rail
+const showcaseRail = document.querySelector(".homeRefShowcase__grid");
+if (showcaseRail) {
+  showcaseRail.addEventListener(
+    "wheel",
+    (event) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+
+      const maxScrollLeft = showcaseRail.scrollWidth - showcaseRail.clientWidth;
+      if (maxScrollLeft <= 0) return;
+
+      const nextScrollLeft = showcaseRail.scrollLeft + event.deltaY;
+      const willMove =
+        (event.deltaY > 0 && showcaseRail.scrollLeft < maxScrollLeft) ||
+        (event.deltaY < 0 && showcaseRail.scrollLeft > 0);
+
+      if (!willMove) return;
+
+      event.preventDefault();
+      showcaseRail.scrollLeft = Math.max(0, Math.min(maxScrollLeft, nextScrollLeft));
+    },
+    { passive: false }
+  );
+}

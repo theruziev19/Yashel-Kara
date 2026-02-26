@@ -1201,18 +1201,16 @@ a{color:inherit;text-decoration:none}
 
 /* Home page (reference layout) */
 .homeReference{
-  --ref-max:min(1536px,98.2vw);
-  --ref-grid-step:clamp(140px,17vw,260px);
+  --ref-lock-width:1512px;
+  --ref-max:min(var(--ref-lock-width),98.2vw);
+  --ref-fluid:var(--ref-max);
+  --ref-grid-columns:8;
+  --ref-grid-step:calc(var(--ref-fluid) / var(--ref-grid-columns));
+  --home-method-gap:16px;
   --ref-line:rgba(17,20,24,.11);
   margin:0;
   background-color:#f3f3f2;
-  background-image:repeating-linear-gradient(
-    90deg,
-    transparent 0,
-    transparent calc(var(--ref-grid-step) - 1px),
-    var(--ref-line) calc(var(--ref-grid-step) - 1px),
-    var(--ref-line) var(--ref-grid-step)
-  );
+  background-image:none;
   color:#121417;
   font-family:"Manrope","Avenir Next","Segoe UI",sans-serif;
 }
@@ -1240,7 +1238,7 @@ a{color:inherit;text-decoration:none}
 }
 .homeRefBrand{
   font-size:42px;
-  font-size:clamp(28px,2.1vw,43px);
+  font-size:clamp(28px,calc(var(--ref-fluid) * 0.021),43px);
   line-height:1;
   letter-spacing:-.02em;
   font-weight:500;
@@ -1252,7 +1250,7 @@ a{color:inherit;text-decoration:none}
 }
 .homeRefNav a{
   font-size:34px;
-  font-size:clamp(20px,1.22vw,36px);
+  font-size:clamp(20px,calc(var(--ref-fluid) * 0.0122),36px);
   line-height:1;
   letter-spacing:-.01em;
   font-weight:500;
@@ -1291,7 +1289,7 @@ a{color:inherit;text-decoration:none}
   position:relative;
   width:var(--ref-max);
   margin:0 auto;
-  height:clamp(370px,39vw,620px);
+  height:clamp(370px,calc(var(--ref-fluid) * 0.39),620px);
   border:1px solid var(--ref-line);
   overflow:hidden;
   background:#d9d6d0;
@@ -1305,10 +1303,10 @@ a{color:inherit;text-decoration:none}
 }
 .homeRefHero h1{
   position:absolute;
-  left:clamp(8px,1.8vw,24px);
-  bottom:-16px;
+  left:clamp(8px,calc(var(--ref-fluid) * 0.018),24px);
+  bottom:0;
   margin:0;
-  font-size:clamp(56px,7vw,144px);
+  font-size:clamp(56px,calc(var(--ref-fluid) * 0.07),144px);
   line-height:.83;
   letter-spacing:-.05em;
   font-weight:500;
@@ -1325,10 +1323,15 @@ a{color:inherit;text-decoration:none}
   grid-template-columns:minmax(220px,1.25fr) minmax(200px,.9fr) minmax(200px,.9fr);
   column-gap:56px;
   row-gap:34px;
+  background-image:linear-gradient(var(--ref-line),var(--ref-line)),linear-gradient(var(--ref-line),var(--ref-line));
+  background-size:1px 100%,1px 100%;
+  background-position:calc(33.333% - (var(--home-method-gap) / 6)) 0,calc(66.666% + (var(--home-method-gap) / 6)) 0;
+  background-repeat:no-repeat;
+  background-origin:content-box;
 }
 .homeRefPhilosophy__title{
   margin:0;
-  font-size:clamp(52px,5.8vw,112px);
+  font-size:clamp(44px,calc(var(--ref-fluid) * 0.048),92px);
   line-height:.9;
   letter-spacing:-.04em;
   font-weight:500;
@@ -1337,7 +1340,7 @@ a{color:inherit;text-decoration:none}
 .homeRefPhilosophy__text{
   margin:0;
   max-width:20ch;
-  font-size:clamp(16px,1.05vw,22px);
+  font-size:clamp(16px,calc(var(--ref-fluid) * 0.0105),22px);
   line-height:1.33;
   letter-spacing:-.016em;
 }
@@ -1349,8 +1352,8 @@ a{color:inherit;text-decoration:none}
   gap:18px;
   padding:16px 0 17px;
   border-top:1px solid var(--ref-line);
-  border-bottom:1px solid var(--ref-line);
-  font-size:clamp(16px,1.02vw,20px);
+  border-bottom:none;
+  font-size:clamp(16px,calc(var(--ref-fluid) * 0.0102),20px);
   line-height:1;
   letter-spacing:-.01em;
   text-transform:uppercase;
@@ -1375,11 +1378,16 @@ a{color:inherit;text-decoration:none}
 }
 .homeRefMethod{
   padding-bottom:92px;
+  background-image:linear-gradient(var(--ref-line),var(--ref-line)),linear-gradient(var(--ref-line),var(--ref-line));
+  background-size:1px 100%,1px 100%;
+  background-position:calc(33.333% - (var(--home-method-gap) / 6)) 0,calc(66.666% + (var(--home-method-gap) / 6)) 0;
+  background-repeat:no-repeat;
+  background-origin:content-box;
 }
 .homeRefMethod__inner h2,
 .homeRefShowcase__head h2{
   margin:0;
-  font-size:clamp(36px,4.6vw,84px);
+  font-size:clamp(36px,calc(var(--ref-fluid) * 0.046),84px);
   line-height:.92;
   letter-spacing:-.04em;
   font-weight:500;
@@ -1389,7 +1397,7 @@ a{color:inherit;text-decoration:none}
   margin-top:20px;
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px;
+  gap:var(--home-method-gap);
 }
 .homeRefMethodCard{
   border:1px solid var(--ref-line);
@@ -1430,43 +1438,76 @@ a{color:inherit;text-decoration:none}
 .homeRefShowcase__grid{
   margin-top:20px;
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:16px;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(290px,320px);
+  gap:14px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:2px 0 16px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+.homeRefShowcase__grid::-webkit-scrollbar{
+  height:8px;
+}
+.homeRefShowcase__grid::-webkit-scrollbar-thumb{
+  background:rgba(18,20,23,.26);
+}
+.homeRefShowcase__grid::-webkit-scrollbar-track{
+  background:rgba(18,20,23,.08);
 }
 .homeRefShowcaseCard{
-  display:block;
+  display:flex;
+  flex-direction:column;
   border:1px solid var(--ref-line);
-  background:rgba(255,255,255,.24);
+  background:#f3f3f2;
+  scroll-snap-align:start;
+}
+.homeRefShowcaseCard__media{
+  padding:4px;
+  border-bottom:1px solid var(--ref-line);
 }
 .homeRefShowcaseCard img{
   width:100%;
   aspect-ratio:4/3;
   object-fit:cover;
-  border-bottom:1px solid var(--ref-line);
+  filter:grayscale(1) contrast(1.03);
 }
-.homeRefShowcaseCard--wide{
-  grid-row:span 2;
+.homeRefShowcaseCard__info{
+  padding:10px 10px 12px;
+  display:grid;
+  gap:8px;
 }
-.homeRefShowcaseCard--wide img{
-  aspect-ratio:4/5;
-  height:100%;
-}
-.homeRefShowcaseCard div{
-  padding:12px 14px;
-}
-.homeRefShowcaseCard p{
+.homeRefShowcaseCard__title{
   margin:0;
-  font-size:16px;
-  letter-spacing:-.01em;
-  font-weight:600;
-}
-.homeRefShowcaseCard span{
-  display:block;
-  margin-top:4px;
-  font-size:11px;
-  letter-spacing:.1em;
+  font-size:clamp(50px,3.5vw,60px);
+  line-height:.86;
+  letter-spacing:-.05em;
+  font-weight:500;
   text-transform:uppercase;
-  color:rgba(18,20,23,.56);
+}
+.homeRefShowcaseCard__meta{
+  margin:0;
+  font-size:13px;
+  line-height:1.2;
+  letter-spacing:.01em;
+  text-transform:uppercase;
+}
+.homeRefShowcaseCard__description{
+  margin:0;
+  font-size:12px;
+  line-height:1.34;
+  color:rgba(18,20,23,.78);
+  min-height:2.68em;
+}
+.homeRefShowcaseCard__cta{
+  margin-top:2px;
+  padding-top:10px;
+  border-top:1px solid var(--ref-line);
+  font-size:14px;
+  line-height:1;
+  letter-spacing:.01em;
+  text-transform:uppercase;
 }
 
 .homeRefFinal{
@@ -1483,7 +1524,7 @@ a{color:inherit;text-decoration:none}
 }
 .homeRefFinal p{
   margin:0;
-  font-size:clamp(34px,4.2vw,80px);
+  font-size:clamp(34px,calc(var(--ref-fluid) * 0.042),80px);
   line-height:.9;
   letter-spacing:-.04em;
   text-transform:uppercase;
@@ -1553,7 +1594,7 @@ a{color:inherit;text-decoration:none}
     height:clamp(300px,54vw,470px);
   }
   .homeRefHero h1{
-    bottom:-12px;
+    bottom:0;
     font-size:clamp(46px,10.2vw,98px);
   }
   .homeRefPhilosophy{
@@ -1563,8 +1604,13 @@ a{color:inherit;text-decoration:none}
   .homeRefMethod__grid{
     grid-template-columns:1fr 1fr;
   }
+  .homeRefMethod{
+    background-image:linear-gradient(var(--ref-line),var(--ref-line));
+    background-size:1px 100%;
+    background-position:50% 0;
+  }
   .homeRefShowcase__grid{
-    grid-template-columns:1fr 1fr;
+    grid-auto-columns:minmax(270px,300px);
   }
   .homeRefFinal__inner{
     flex-direction:column;
@@ -1587,7 +1633,7 @@ a{color:inherit;text-decoration:none}
   }
   .homeRefHero h1{
     left:8px;
-    bottom:8px;
+    bottom:0;
     font-size:clamp(42px,14vw,78px);
   }
   .homeRefPhilosophy{
@@ -1604,6 +1650,7 @@ a{color:inherit;text-decoration:none}
   }
   .homeRefMethod{
     padding-bottom:66px;
+    background-image:none;
   }
   .homeRefMethod__grid{
     grid-template-columns:1fr;
@@ -1612,14 +1659,7 @@ a{color:inherit;text-decoration:none}
     padding-bottom:66px;
   }
   .homeRefShowcase__grid{
-    grid-template-columns:1fr;
-  }
-  .homeRefShowcaseCard--wide{
-    grid-row:auto;
-  }
-  .homeRefShowcaseCard--wide img{
-    aspect-ratio:4/3;
-    height:auto;
+    grid-auto-columns:minmax(240px,86vw);
   }
   .homeRefFinal{
     padding-top:22px;
