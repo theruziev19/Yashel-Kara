@@ -1201,9 +1201,8 @@ a{color:inherit;text-decoration:none}
 
 /* Home page (reference layout) */
 .homeReference{
-  --ref-lock-width:1512px;
-  --ref-max:min(var(--ref-lock-width),98.2vw);
-  --ref-fluid:var(--ref-max);
+  --ref-max:100%;
+  --ref-fluid:100vw;
   --ref-grid-columns:8;
   --ref-grid-step:calc(var(--ref-fluid) / var(--ref-grid-columns));
   --home-method-gap:16px;
