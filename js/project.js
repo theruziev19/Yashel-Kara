@@ -1,4 +1,4 @@
-import { projects } from "./data.js";
+import { projects } from "./data.js?v=20260228";
 
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("slug");
@@ -25,7 +25,7 @@ if (titleEl) {
       const designYear = Number.isInteger(year) ? String(year - 1) : p.meta.year;
       const factItems = [
         ["Студия", "Yashel KARA"],
-        ["Архитекторы", p.authors || "Yashel Kara Team"],
+        ["Архитекторы", p.authors || "Команда Yashel KARA"],
         ["Расположение", p.meta.location],
         ["Площадь", p.meta.area],
         ["Год реализации", p.meta.year],

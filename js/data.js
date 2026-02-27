@@ -199,4 +199,96 @@ export const projects = [
     ],
     gallery: ["assets/scene-02.jpg","assets/p2.jpg","assets/scene-03.jpg","assets/p1.jpg","assets/scene-01.jpg"]
   },
+  {
+    slug: "b13-residence",
+    title: "B13 RESIDENCE",
+    typeLabel: "АРХИТЕКТУРНЫЙ ПРОЕКТ",
+    category: "architecture",
+    cover: "assets/b13/Gemini_Generated_Image_tl5e7xtl5e7xtl5e.png",
+    tagline: "Лесной участок, панорамное остекление и тёплая вечерняя сцена.",
+    meta: { location: "Tallinn, Estonia", area: "286 м²", year: "2025", role: "Architecture" },
+    quote: "СВЕТ.\nТИШИНА.\nПРОПОРЦИЯ.",
+    lead: "Дом спроектирован как спокойный горизонтальный объём в глубине участка.",
+    body: "Основной акцент сделан на мягкой границе между интерьером и лесом через длинные стеклянные плоскости.",
+    description: [
+      "Композиция собирается из чистых горизонталей и глубоких выносов кровли, которые формируют защищённые внешние зоны.",
+      "Внутренние пространства организованы по принципу непрерывного маршрута: входная группа, дневная зона, приватный блок и терраса.",
+      "Материалы решены в тёплой палитре дерева и минеральных фактур, чтобы подчеркнуть спокойный характер дома."
+    ],
+    plans: [
+      {
+        title: "Экспликация дневного уровня",
+        rooms: [
+          ["Прихожая", "10.1 м²"],
+          ["Кухня-столовая", "31.6 м²"],
+          ["Гостиная", "39.2 м²"],
+          ["Кабинет", "14.8 м²"],
+          ["Гостевой санузел", "4.9 м²"]
+        ]
+      },
+      {
+        title: "Экспликация приватного блока",
+        rooms: [
+          ["Мастер-спальня", "23.8 м²"],
+          ["Гардероб", "8.7 м²"],
+          ["Ванная", "11.3 м²"],
+          ["Спальня 2", "16.4 м²"],
+          ["Спальня 3", "15.9 м²"]
+        ]
+      }
+    ],
+    gallery: [
+      "assets/b13/Gemini_Generated_Image_bpga77bpga77bpga.png",
+      "assets/b13/Gemini_Generated_Image_tl5e7xtl5e7xtl5e.png",
+      "assets/b13/Gemini_Generated_Image_loazb2loazb2loaz.png",
+      "assets/b13/Gemini_Generated_Image_9fxvcx9fxvcx9fxv.png",
+      "assets/b13/Gemini_Generated_Image_cnyqbrcnyqbrcnyq.png"
+    ]
+  },
+  {
+    slug: "b9-courtyard-house",
+    title: "B9 COURTYARD",
+    typeLabel: "АРХИТЕКТУРНЫЙ ПРОЕКТ",
+    category: "architecture",
+    cover: "assets/b9-1/Gemini_Generated_Image_oqbqtxoqbqtxoqbq.png",
+    tagline: "Частный дом вокруг защищённого двора и камерного сада.",
+    meta: { location: "Vilnius, Lithuania", area: "248 м²", year: "2025", role: "Architecture" },
+    quote: "ДВОР.\nСВЕТ.\nУКРЫТИЕ.",
+    lead: "Проект построен вокруг внутреннего двора как главного источника света и приватности.",
+    body: "Фасады с улицы остаются сдержанными, а все ключевые помещения раскрываются в сторону дворового пространства.",
+    description: [
+      "Планировочная схема формирует замкнутый периметр, где ландшафт работает как продолжение жилых помещений.",
+      "Глубокие проёмы и навесы контролируют инсоляцию в течение дня, сохраняя визуальный комфорт внутри.",
+      "Архитектурный язык минимален: чистые объёмы, тёплые отделки и акцент на ритме вертикальных элементов."
+    ],
+    plans: [
+      {
+        title: "Экспликация общественного контура",
+        rooms: [
+          ["Входная группа", "9.3 м²"],
+          ["Кухня", "19.1 м²"],
+          ["Столовая", "18.7 м²"],
+          ["Гостиная", "36.5 м²"],
+          ["Гостевая", "13.2 м²"]
+        ]
+      },
+      {
+        title: "Экспликация жилого крыла",
+        rooms: [
+          ["Мастер-спальня", "21.9 м²"],
+          ["Ванная мастер-блока", "9.4 м²"],
+          ["Спальня 2", "15.6 м²"],
+          ["Спальня 3", "15.1 м²"],
+          ["Постирочная", "6.2 м²"]
+        ]
+      }
+    ],
+    gallery: [
+      "assets/b9-1/Gemini_Generated_Image_oqbqtxoqbqtxoqbq.png",
+      "assets/b9-1/Gemini_Generated_Image_9u26n39u26n39u26.png",
+      "assets/b9-1/Gemini_Generated_Image_9i30829i30829i30.png",
+      "assets/b9-1/Gemini_Generated_Image_z4mg8mz4mg8mz4mg.png",
+      "assets/b9-1/Gemini_Generated_Image_aohm65aohm65aohm.png"
+    ]
+  },
 ];

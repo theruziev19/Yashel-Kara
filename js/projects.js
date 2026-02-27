@@ -1,37 +1,63 @@
-import { projects } from "./data.js";
+import { projects } from "./data.js?v=20260228";
 
 const grid = document.getElementById("projectsGrid");
 if (grid) {
   const tabs = Array.from(document.querySelectorAll(".tab[data-filter]"));
+  const locationShortMap = {
+    "Raubichi, Belarus": "RAUBICHI, BY",
+    "Algarve, Portugal": "ALGARVE, PT",
+    "Prague, Czechia": "PRAGUE, CZ",
+    "Lisbon, Portugal": "LISBON, PT",
+    "Riga, Latvia": "RIGA, LV",
+    "Tallinn, Estonia": "TALLINN, EE",
+    "Vilnius, Lithuania": "VILNIUS, LT",
+  };
+
+  const getProjectMeta = (project) => {
+    const location = locationShortMap[project.meta.location] || project.meta.location;
+    return `${project.meta.year} / ${location}`;
+  };
 
   const createProjectCard = (project) => {
     const card = document.createElement("a");
     card.className = "projectCard";
-    card.href = `project.html?slug=${encodeURIComponent(project.slug)}`;
+    card.href = `project.html?slug=${encodeURIComponent(project.slug)}&v=20260228`;
     card.setAttribute("aria-label", `Открыть проект ${project.title}`);
+
+    const media = document.createElement("div");
+    media.className = "projectCard__media";
 
     const cover = document.createElement("img");
     cover.src = project.cover;
-    cover.alt = project.title;
+    cover.alt = `Визуал проекта ${project.title}`;
     cover.loading = "lazy";
     cover.decoding = "async";
     cover.addEventListener("error", () => {
       cover.src = "assets/cover.jpg";
     });
+    media.appendChild(cover);
 
     const info = document.createElement("div");
     info.className = "projectCard__info";
 
-    const title = document.createElement("div");
+    const title = document.createElement("p");
     title.className = "projectCard__title";
     title.textContent = project.title;
 
-    const type = document.createElement("div");
-    type.className = "projectCard__type";
-    type.textContent = project.typeLabel;
+    const meta = document.createElement("p");
+    meta.className = "projectCard__meta";
+    meta.textContent = getProjectMeta(project);
 
-    info.append(title, type);
-    card.append(cover, info);
+    const description = document.createElement("p");
+    description.className = "projectCard__description";
+    description.textContent = project.tagline || project.body;
+
+    const cta = document.createElement("span");
+    cta.className = "projectCard__cta";
+    cta.textContent = "ОТКРЫТЬ ПРОЕКТ →";
+
+    info.append(title, meta, description, cta);
+    card.append(media, info);
     return card;
   };
 

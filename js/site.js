@@ -1,4 +1,4 @@
-import { projects } from "./data.js";
+import { projects } from "./data.js?v=20260228";
 
 const site = {
   studioName: "Yashel KARA",
