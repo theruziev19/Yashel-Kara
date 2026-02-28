@@ -124,27 +124,27 @@ if (heroSection || parallaxItems.length) {
   window.addEventListener("resize", queueUpdate);
 }
 
-// Map vertical mouse-wheel to horizontal scrolling in Selected Work rail
-const showcaseRail = document.querySelector(".homeRefShowcase__grid");
-if (showcaseRail) {
-  showcaseRail.addEventListener(
-    "wheel",
-    (event) => {
-      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+// Map touchpad/mouse vertical wheel gestures to horizontal rail scrolling
+const horizontalWheelSelector =
+  ".homeRefShowcase__grid, [data-wheel-horizontal-scroll]";
 
-      const maxScrollLeft = showcaseRail.scrollWidth - showcaseRail.clientWidth;
-      if (maxScrollLeft <= 0) return;
+document.addEventListener(
+  "wheel",
+  (event) => {
+    if (!(event.target instanceof Element)) return;
 
-      const nextScrollLeft = showcaseRail.scrollLeft + event.deltaY;
-      const willMove =
-        (event.deltaY > 0 && showcaseRail.scrollLeft < maxScrollLeft) ||
-        (event.deltaY < 0 && showcaseRail.scrollLeft > 0);
+    const rail = event.target.closest(horizontalWheelSelector);
+    if (!rail) return;
 
-      if (!willMove) return;
+    // Keep native horizontal gestures untouched.
+    if (Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
 
-      event.preventDefault();
-      showcaseRail.scrollLeft = Math.max(0, Math.min(maxScrollLeft, nextScrollLeft));
-    },
-    { passive: false }
-  );
-}
+    const maxScrollLeft = rail.scrollWidth - rail.clientWidth;
+    if (maxScrollLeft <= 0) return;
+
+    const nextScrollLeft = rail.scrollLeft + event.deltaY;
+    event.preventDefault();
+    rail.scrollLeft = Math.max(0, Math.min(maxScrollLeft, nextScrollLeft));
+  },
+  { passive: false, capture: true }
+);
